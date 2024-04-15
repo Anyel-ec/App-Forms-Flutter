@@ -24,7 +24,19 @@ class HomeScreen extends StatelessWidget {
               context.push('/cubits');
               // Navigator.of(context).pushNamed('form-screen');
             },
-          )
+
+          ), 
+          ListTile( 
+            title: const Text('Bloc'),
+            subtitle: const Text('Gestor de estados complejo'),
+            trailing: const Icon(Icons.arrow_forward_ios),
+            onTap: () {
+              context.push('/bloc');
+              // Navigator.of(context).pushNamed('form-screen');
+            },
+
+          ),
+
         ],
       ),
     );
