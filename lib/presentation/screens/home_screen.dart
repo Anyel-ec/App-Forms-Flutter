@@ -40,7 +40,7 @@ class _CubitCounterView extends StatelessWidget {
     
           ), 
           ListTile( 
-            title: const Text('Bloc'),
+            title: const Text('BloC'),
             subtitle: const Text('Gestor de estados complejo'),
             trailing: const Icon(Icons.arrow_forward_ios),
             onTap: () {
