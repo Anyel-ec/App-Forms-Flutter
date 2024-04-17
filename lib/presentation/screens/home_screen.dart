@@ -49,6 +49,26 @@ class _CubitCounterView extends StatelessWidget {
             },
     
           ),
+
+
+          // ///////////////////////////ESPACIO PARA DIVIDIR ///////////////////////////////////////
+          const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Divider(),
+          ),
+
+
+
+          ///////////////////////////////////////////NUEVO USUARIO////////////////////////////////////////
+          ListTile(
+            title: const Text('Nuevo Usuario'),
+            subtitle: const Text('Formulario de registro'),
+            trailing: const Icon(Icons.arrow_forward_ios),
+            onTap: () {
+              context.push('/register');
+              // Navigator.of(context).pushNamed('form-screen');
+            },
+          )
     
         ],
       ),
