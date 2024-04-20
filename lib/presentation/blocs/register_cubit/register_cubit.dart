@@ -20,6 +20,7 @@ class RegisterCubit extends Cubit<RegisterFormState> {
   }
 
   void register() {
+    print ('Registering...');
     emit(state.copyWith(formStatus: FormStatus.posting));
   }
 }
