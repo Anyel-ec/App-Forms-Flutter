@@ -1,5 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
+import 'package:forms_app/infrastructure/inputs/inputs.dart';
+import 'package:formz/formz.dart';
 
 part 'register_form_state.dart';
 
@@ -8,7 +10,12 @@ class RegisterCubit extends Cubit<RegisterFormState> {
 
   // metodos que cambian el estado del formulario
   void usernameChanged(String value) {
-    emit(state.copyWith(username: value));
+    final username = Username.dirty(value); // valor modificado
+
+    emit(state.copyWith(
+      username: username,
+      isValid: Formz.validate([username, state.password]) // validar que el username y el password sean validos
+    ));
   }
 
   void emailChanged(String value) {
@@ -16,11 +23,12 @@ class RegisterCubit extends Cubit<RegisterFormState> {
   }
 
   void passwordChanged(String value) {
-    emit(state.copyWith(password: value));
+    final password = Password.dirty(value);
+    emit(state.copyWith(password: password, isValid: Formz.validate([password, state.username])));
   }
 
   void register() {
-    print ('Registering...');
+    print('Registering...');
     emit(state.copyWith(formStatus: FormStatus.posting));
   }
 }
