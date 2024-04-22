@@ -6,7 +6,7 @@ class RegisterFormState extends Equatable {
   final FormStatus formStatus;
   final bool isValid;
   final Username username;
-  final String email;
+  final Email email;
   final Password password;
 
   const RegisterFormState(
@@ -14,7 +14,7 @@ class RegisterFormState extends Equatable {
       this.isValid = false,
       this.formStatus = FormStatus.invalid,
       this.username = const Username.pure(), // valor inicial
-      this.email = '',
+      this.email = const Email.pure(),
       this.password = const Password.pure()});
 
   // copiar el estado actual y cambiar el valor de formStatus
@@ -22,7 +22,7 @@ class RegisterFormState extends Equatable {
     FormStatus? formStatus,
     bool? isValid,
     Username? username,
-    String? email,
+    Email? email,
     Password? password,
     
   }) {
