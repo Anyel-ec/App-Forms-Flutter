@@ -88,6 +88,7 @@ class _RegisterForm extends StatelessWidget {
           prefixIcon: const Icon(Icons.lock),
           onChanged: registerCubit.passwordChanged,
           errorMessage: password.errorMessage,
+          obscureText: true,
         ),
 
 

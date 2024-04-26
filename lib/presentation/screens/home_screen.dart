@@ -25,7 +25,7 @@ class _CubitCounterView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home Screen'),
+        title: const Text('Inicio - Anyel EC'),
       ),
       body: ListView(
         children: [
