@@ -13,7 +13,7 @@ A Flutter project for managing user registration and counter functionalities usi
 ### New User with validation
 ![Alt text](docs/new_user.jpg) 
 ### New User Form
-![Alt text](docs/new_user.jpg) 
+![Alt text](docs/new_user2.jpg) 
 ### Count with Cubit
 ![Alt text](docs/cubit.jpg) 
 ### Count with BloC
